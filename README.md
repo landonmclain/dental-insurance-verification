@@ -6,9 +6,15 @@ eligibility result and a plain-English benefit summary.
 > **No real patient data.** Every card in this repo is synthetically generated.
 > This is a HIPAA-minded demo, not a production system.
 
+**Built on [Stedi](https://stedi.com).** Eligibility runs through Stedi's real-time
+270/271 API. The mock fixtures in this repo are small, hand-authored approximations
+of the sandbox examples Stedi publishes in its
+[eligibility mock requests](https://stedi.com/docs/healthcare/api-reference/mock-requests-eligibility-checks)
+docs.
+
 **Why local-first.** The original plan for this project was a local-only system: the
 pipeline runs on your machine, the vision model runs on your GPU, and the only
-external call is the eligibility request to a clearinghouse. Cloud providers
+external call is the eligibility request to Stedi, an API-first clearinghouse. Cloud providers
 (OpenRouter, OpenAI) are an option for the demo because every card in this repo is
 synthetic — there is no PHI. In production the story stays local.
 
@@ -39,6 +45,10 @@ card photo ──► extract (VLM: local model server, OpenRouter, or OpenAI)
    ──► summarize ──► plain-English benefit summary
 ```
 
+Eligibility goes through Stedi's
+[Real-Time Eligibility Check JSON endpoint](https://stedi.com/docs/healthcare/api-reference/post-eligibility-check):
+`mock` answers locally, `live` sends the 270 to Stedi.
+
 One flag, `IV_MODE`, bundles every backend switch into three tiers. A tier without
 its keys fails fast at startup — nothing silently falls back to mock:
 
@@ -46,7 +56,10 @@ its keys fails fast at startup — nothing silently falls back to mock:
 |---|---|---|---|---|
 | `mock` (default) | none | card sidecar answer key, no model | deterministic mock 271 | off |
 | `llm` | model provider keys | real VLM OCR | mock 271 | on |
-| `live` | Stedi + model provider keys | real VLM OCR | real Stedi 270/271 | on |
+| `live` | Stedi + model provider keys | real VLM OCR | real Stedi 270/271 (production key) | on |
+
+A Stedi test key returns only Stedi's published mock requests; `live` sends real 270s
+and needs a production Stedi account.
 
 Models are chosen by prefix: `openrouter:` routes to OpenRouter, `openai:` to OpenAI,
 `local:` (or a bare model name) to a local model server speaking the OpenAI
@@ -88,7 +101,7 @@ Every option is documented in [`.env.example`](.env.example). The env vars:
 | `IV_LOCAL_URL` | `http://localhost:11434/v1` | Local model server (OpenAI-compatible endpoint root) |
 | `IV_OPENROUTER_API_KEY` | — | OpenRouter key (falls back to `OPENROUTER_API_KEY`); required when a model uses `openrouter:` |
 | `IV_OPENAI_API_KEY` | — | OpenAI key (falls back to `OPENAI_API_KEY`); required when a model uses `openai:` |
-| `STEDI_API_KEY` | — | Stedi eligibility key; required for `live` |
+| `STEDI_API_KEY` | — | Stedi API key; required for `live` (production account) |
 | `IV_DATA_DIR` | `synth/output` | Generated card output directory |
 | `IV_CONFIDENCE_THRESHOLD` | `0.7` | Confidence below which a card escalates to human review |
 
@@ -97,6 +110,10 @@ Every option is documented in [`.env.example`](.env.example). The env vars:
 Every card in the repo is synthetic. This is a HIPAA-minded demo, not a
 compliance claim: production eligibility calls through a clearinghouse require a
 BAA and the deploying organization's policies.
+
+The sample cards and 271 fixtures use the same fictional patient, payer IDs, and
+provider NPI as the sandbox examples Stedi publishes in its docs — no real
+coverage data, and no Stedi responses captured for publication.
 
 ## Repo layout
 
