@@ -1,0 +1,179 @@
+{
+  "payerId": "61101",
+  "payer": {
+    "name": {"organization": "HUMANA"},
+    "type": "PAYER",
+    "identification": "61101"
+  },
+  "provider": {
+    "name": {"organization": "MEDICAL PROVIDER"},
+    "type": "PROVIDER",
+    "npi": "1999999984"
+  },
+  "subscriber": {
+    "name": {"person": {"firstName": "JANE", "lastName": "DOE", "middleName": "L"}},
+    "memberId": "HUMANA123",
+    "dateOfBirth": "1975-05-05",
+    "gender": "FEMALE",
+    "address": {
+      "addressLine1": "101 MAIN ST",
+      "city": "ATLANTA",
+      "state": "GA",
+      "postalCode": "303010001"
+    },
+    "additionalInformation": {"group": {"number": "11223344", "name": "HUMANA INSURANCE COMPANY"}, "mbi": "1A22BB3CC44"},
+    "dates": {"plan": {"start": "2026-11-01", "end": "2027-11-01"}, "service": {"start": "2024-09-17"}}
+  },
+  "plans": [
+    {
+      "benefits": {
+        "statuses": [
+          {
+            "coverageLevel": "EMPLOYEE_ONLY",
+            "insuranceType": "PREFERRED_PROVIDER_ORGANIZATION_PPO",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "30", "definition": "Health Benefit Plan Coverage", "system": "STC"},
+            "planCoverageDescription": "Humana Gold PPO",
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "1", "definition": "Medical Care", "system": "STC"},
+            "status": "ACTIVE_COVERAGE"
+          }
+        ],
+        "coInsurance": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "insuranceType": "PREFERRED_PROVIDER_ORGANIZATION_PPO",
+            "network": {"indicator": "IN_NETWORK"},
+            "service": {"value": "49", "definition": "Hospital - Room and Board", "system": "STC"},
+            "messages": ["INPATIENT HOSPITAL ROOM AND BOARD"],
+            "timePeriod": "ADMISSION",
+            "percent": "0.2"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "insuranceType": "PREFERRED_PROVIDER_ORGANIZATION_PPO",
+            "network": {"indicator": "IN_NETWORK"},
+            "service": {"value": "50", "definition": "Pharmacy - Prescription (In Network)", "system": "STC"},
+            "messages": ["PRESCRIPTION DRUGS"],
+            "timePeriod": "CALENDAR_YEAR",
+            "percent": "0.3"
+          }
+        ],
+        "coPayment": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "insuranceType": "PREFERRED_PROVIDER_ORGANIZATION_PPO",
+            "network": {"indicator": "IN_NETWORK"},
+            "service": {"value": "98", "definition": "Professional (Physician) Visit - Office", "system": "STC"},
+            "messages": ["PHYSICIAN OFFICE VISIT"],
+            "timePeriod": "SERVICE_PERIOD",
+            "amount": "25"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "88", "definition": "Diagnostic Laboratory Services", "system": "STC"},
+            "timePeriod": "SERVICE_PERIOD",
+            "amount": "10"
+          }
+        ],
+        "deductible": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "insuranceType": "PREFERRED_PROVIDER_ORGANIZATION_PPO",
+            "network": {"indicator": "IN_NETWORK"},
+            "service": {"value": "30", "definition": "Health Benefit Plan Coverage", "system": "STC"},
+            "timePeriod": "CALENDAR_YEAR",
+            "amount": "1500"
+          },
+          {
+            "coverageLevel": "FAMILY",
+            "insuranceType": "PREFERRED_PROVIDER_ORGANIZATION_PPO",
+            "network": {"indicator": "IN_NETWORK"},
+            "service": {"value": "30", "definition": "Health Benefit Plan Coverage", "system": "STC"},
+            "timePeriod": "CALENDAR_YEAR",
+            "amount": "3000"
+          }
+        ],
+        "outOfPocket": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "insuranceType": "PREFERRED_PROVIDER_ORGANIZATION_PPO",
+            "network": {"indicator": "IN_NETWORK"},
+            "service": {"value": "30", "definition": "Health Benefit Plan Coverage", "system": "STC"},
+            "timePeriod": "CALENDAR_YEAR",
+            "amount": "8000"
+          },
+          {
+            "coverageLevel": "FAMILY",
+            "insuranceType": "PREFERRED_PROVIDER_ORGANIZATION_PPO",
+            "network": {"indicator": "IN_NETWORK"},
+            "service": {"value": "30", "definition": "Health Benefit Plan Coverage", "system": "STC"},
+            "timePeriod": "CALENDAR_YEAR",
+            "amount": "16000"
+          }
+        ],
+        "limitations": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "30", "definition": "Health Benefit Plan Coverage", "system": "STC"},
+            "messages": ["MAX DEPENDENT AGE"],
+            "quantity": {"value": "26", "qualifier": "YEARS"}
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "98", "definition": "Professional (Physician) Visit - Office", "system": "STC"},
+            "messages": ["PRIMARY CARE PHYSICIAN"],
+            "quantity": {"value": "3", "qualifier": "VISITS"},
+            "timePeriod": "CALENDAR_YEAR"
+          }
+        ],
+        "nonCovered": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "insuranceType": "PREFERRED_PROVIDER_ORGANIZATION_PPO",
+            "network": {"indicator": "IN_NETWORK"},
+            "service": {"value": "33", "definition": "Vision Care", "system": "STC"},
+            "messages": ["VIEW CONTRACT FOR COVERAGE DETAILS"],
+            "amount": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "insuranceType": "PREFERRED_PROVIDER_ORGANIZATION_PPO",
+            "network": {"indicator": "IN_NETWORK"},
+            "service": {"value": "47", "definition": "Hospital - Emergency (Ambulance)", "system": "STC"},
+            "messages": ["EMERGENCY MEDICAL SERVICES"],
+            "amount": "0"
+          }
+        ],
+        "primaryCareProvider": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "relatedEntities": [{"name": {"person": {"firstName": "Dough", "lastName": "John"}}, "type": "PRIMARY_CARE_PROVIDER", "address": {"addressLine1": "202 Main St", "city": "Tulsa", "state": "OK", "postalCode": "74008"}, "contacts": [{"phoneNumbers": ["9999999999"]}]}]
+          }
+        ],
+        "benefitDisclaimer": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "messages": ["THIS IS ONLY AN ESTIMATION OF BENEFITS, AND ALL PAYMENTS ARE SUBJECT TO POLICY GUIDELINES, MEDICAL NECESSITY, AND MEMBER ELIGIBILITY AT THE TIME SERVICES ARE PERFORMED."]
+          }
+        ],
+        "otherSourceOfData": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "messages": ["NO DESCRIPTION PROVIDED"]
+          }
+        ]
+      }
+    }
+  ]
+}

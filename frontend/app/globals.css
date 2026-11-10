@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Markdown rendering inside chat bubbles (scoped to .iv-md). */
+.iv-md > *:first-child {
+  margin-top: 0;
+}
+.iv-md > *:last-child {
+  margin-bottom: 0;
+}
+.iv-md p {
+  margin: 0.5em 0;
+}
+.iv-md ul,
+.iv-md ol {
+  margin: 0.5em 0;
+  padding-left: 1.25em;
+  list-style: revert;
+}
+.iv-md li {
+  margin: 0.2em 0;
+}
+.iv-md strong {
+  font-weight: 600;
+}
+.iv-md code {
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  padding: 0.1em 0.3em;
+  font-size: 0.9em;
+}
+.iv-md pre {
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  padding: 0.75em;
+  overflow-x: auto;
+  margin: 0.5em 0;
+}
+.iv-md pre code {
+  background: none;
+  padding: 0;
+}
+.iv-md table {
+  border-collapse: collapse;
+  margin: 0.5em 0;
+  width: 100%;
+  font-size: 0.9em;
+}
+.iv-md th,
+.iv-md td {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 0.3em 0.5em;
+  text-align: left;
+}
+.iv-md th {
+  background: rgba(0, 0, 0, 0.04);
+  font-weight: 600;
+}
+.iv-md a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+.iv-md blockquote {
+  border-left: 3px solid rgba(0, 0, 0, 0.2);
+  padding-left: 0.75em;
+  margin: 0.5em 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* Dark mode (class-based, mirrors paf-ui) — override the light markdown styles. */
+.dark .iv-md code {
+  background: rgba(255, 255, 255, 0.1);
+}
+.dark .iv-md pre {
+  background: rgba(255, 255, 255, 0.08);
+}
+.dark .iv-md th,
+.dark .iv-md td {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.dark .iv-md th {
+  background: rgba(255, 255, 255, 0.06);
+}
+.dark .iv-md a {
+  color: #60a5fa;
+}
+.dark .iv-md blockquote {
+  border-left-color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.6);
+}

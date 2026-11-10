@@ -1,0 +1,118 @@
+{
+  "payerId": "84103",
+  "payer": {
+    "name": {"organization": "ANTHEM BLUE CROSS"},
+    "type": "PAYER",
+    "identification": "84103"
+  },
+  "provider": {
+    "name": {"organization": "ONE"},
+    "type": "PROVIDER",
+    "npi": "1999999984"
+  },
+  "subscriber": {
+    "name": {"person": {"firstName": "AARDVARK", "lastName": "DENT"}},
+    "memberId": "AFK987654321",
+    "dateOfBirth": "1970-12-12",
+    "address": {
+      "addressLine1": "123 BRIGHT SMILE BLVD",
+      "city": "TOOTHVILLE",
+      "state": "CA",
+      "postalCode": "11111"
+    },
+    "additionalInformation": {"group": {"number": "CAA28A0001", "name": "FAMILY DENTAL PPO"}},
+    "dates": {"plan": {"start": "2026-11-01", "end": "2027-11-01"}, "eligibility": {"start": "2024-01-01"}}
+  },
+  "plans": [
+    {
+      "benefits": {
+        "statuses": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "service": {"value": "30", "definition": "Health Benefit Plan Coverage", "system": "STC"},
+            "relatedEntities": [{"name": {"organization": "Blue Cross and Blue Shield of Kansas City"}, "type": "PARTY_PERFORMING_VERIFICATION", "payerId": "47171"}],
+            "planCoverageDescription": "84103 DENTAL",
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "FAMILY",
+            "insuranceType": "GROUP_POLICY",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "35", "definition": "Dental Care", "system": "STC"},
+            "status": "ACTIVE_COVERAGE"
+          }
+        ],
+        "coInsurance": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "OUT_OF_NETWORK"},
+            "service": {"value": "23", "definition": "Diagnostic Dental", "system": "STC"},
+            "planCoverageDescription": "OON",
+            "percent": "0.1"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_NETWORK"},
+            "service": {"value": "23", "definition": "Diagnostic Dental", "system": "STC"},
+            "planCoverageDescription": "PRIME2",
+            "percent": "0"
+          }
+        ],
+        "deductible": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "OUT_OF_NETWORK"},
+            "service": {"value": "38", "definition": "Orthodontics", "system": "STC"},
+            "planCoverageDescription": "OON",
+            "timePeriod": "CONTRACT",
+            "amount": "0"
+          },
+          {
+            "coverageLevel": "FAMILY",
+            "network": {"indicator": "OUT_OF_NETWORK"},
+            "service": {"value": "38", "definition": "Orthodontics", "system": "STC"},
+            "planCoverageDescription": "OON",
+            "timePeriod": "CONTRACT",
+            "amount": "0"
+          }
+        ],
+        "limitations": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "service": {"value": "32", "definition": "Plan Waiting Period", "system": "STC"},
+            "messages": ["WAITING PERIOD FROM MEMBER'S WAIT START DATE"],
+            "quantity": {"value": "0", "qualifier": "MONTH"}
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "service": {"value": "35", "definition": "Dental Care", "system": "STC"},
+            "messages": ["CHILD AGE"],
+            "serviceLimits": [{"ageMaximum": 26}]
+          }
+        ],
+        "benefitDescription": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "OUT_OF_NETWORK"},
+            "service": {"value": "23", "definition": "Diagnostic Dental", "system": "STC"},
+            "planCoverageDescription": "OON",
+            "percent": "0.9"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_NETWORK"},
+            "service": {"value": "23", "definition": "Diagnostic Dental", "system": "STC"},
+            "planCoverageDescription": "PRIME2",
+            "percent": "1"
+          }
+        ],
+        "benefitDisclaimer": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "messages": ["UNLESS OTHERWISE REQUIRED BY STATE LAW, THIS NOTICE IS NOT A GUARANTEE OF PAYMENT. BENEFITS ARE SUBJECT TO ALL CONTRACT LIMITATIONS AND THE MEMBERS ELIGIBILITY STATUS ON THE DATE OF SERVICE."]
+          }
+        ]
+      }
+    }
+  ]
+}

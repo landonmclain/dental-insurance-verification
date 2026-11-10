@@ -1,0 +1,82 @@
+[
+  {
+    "section": "Adjunctive General Services",
+    "ranges": ["D9110 – D9999"],
+    "category": "Basic or Major"
+  },
+  {
+    "section": "Crown (Custom and Pre-Fabricated) Restoration Services",
+    "ranges": ["D2710 – D2799", "D2928 – D2956", "D2980"],
+    "category": "Basic or Major"
+  },
+  {
+    "section": "Dental Implant Restoration Services",
+    "ranges": ["D6010 – D6199"],
+    "category": "Major"
+  },
+  {
+    "section": "Diagnostic Services",
+    "ranges": ["D0120 – D0999"],
+    "category": "Basic or Preventative"
+  },
+  {
+    "section": "Endodontic Services",
+    "ranges": ["D3110 – D3999"],
+    "category": "Basic"
+  },
+  {
+    "section": "Fixed Partial Denture Restoration Services",
+    "ranges": ["D6205 – D6999"],
+    "category": "Major"
+  },
+  {
+    "section": "Inlay Restoration Services",
+    "ranges": ["D2510 – D2530", "D2610 – D2630", "D2650 – D2652", "D2981"],
+    "category": "Major"
+  },
+  {
+    "section": "Labial Veneer Restoration Services",
+    "ranges": ["D2960 – D2962", "D2983"],
+    "category": "Major"
+  },
+  {
+    "section": "Maxillofacial Prosthetic Services",
+    "ranges": ["D5909 – D5999"],
+    "category": "Major (if Covered)"
+  },
+  {
+    "section": "Onlay Restoration Services",
+    "ranges": ["D2542 – D2544", "D2624 – D2644", "D2662 – D2664", "D2982"],
+    "category": "Major"
+  },
+  {
+    "section": "Oral and Maxillofacial Surgery Services",
+    "ranges": ["D7111 – D7999"],
+    "category": "Basic, Major, or Orthodontic"
+  },
+  {
+    "section": "Orthodontic Services",
+    "ranges": ["D8010 – D8999"],
+    "category": "Orthodontic"
+  },
+  {
+    "section": "Other Restoration Services",
+    "ranges": ["D2140 – D2430", "D2910 – D2920", "D2999"],
+    "category": "Basic"
+  },
+  {
+    "section": "Periodontal Services",
+    "ranges": ["D4210 – D4999"],
+    "category": "Basic or Major"
+  },
+  {
+    "section": "Preventative Services",
+    "ranges": ["D1110 – D1999"],
+    "category": "Preventative"
+  },
+  {
+    "section": "Removable Prosthodontic Restoration Services",
+    "ranges": ["D5110 – D5899"],
+    "category": "Major"
+  }
+]

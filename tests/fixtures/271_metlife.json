@@ -1,0 +1,107 @@
+{
+  "payerId": "10134",
+  "payer": {
+    "name": {"organization": "10134"},
+    "type": "PAYER",
+    "identification": "101256"
+  },
+  "provider": {
+    "name": {"person": {"lastName": "ONE"}},
+    "type": "PROVIDER",
+    "provider": {"code": "PERFORMING", "reference": "207Q00000X"},
+    "npi": "1999999984"
+  },
+  "subscriber": {
+    "name": {"person": {"firstName": "ELEPHANT", "lastName": "DENT"}},
+    "memberId": "88877788",
+    "dateOfBirth": "1984-02-29",
+    "gender": "MALE",
+    "address": {
+      "addressLine1": "654 SAFARI STREET",
+      "city": "TUSKTOWN",
+      "state": "CA",
+      "postalCode": "11111"
+    },
+    "additionalInformation": {"group": {"number": "7771117", "name": "GROUP 12345"}},
+    "dates": {"plan": {"start": "2026-11-01", "end": "2027-11-01"}, "policy": {"start": "2022-03-01"}}
+  },
+  "plans": [
+    {
+      "benefits": {
+        "statuses": [
+          {
+            "coverageLevel": "FAMILY",
+            "insuranceType": "GROUP_POLICY",
+            "priorAuthIndicator": "NOT_REQUIRED",
+            "service": {"value": "30", "definition": "Health Benefit Plan Coverage", "system": "STC"},
+            "messages": ["NO FILING LIMIT"],
+            "planCoverageDescription": "GROUP 12345",
+            "status": "ACTIVE_COVERAGE"
+          }
+        ],
+        "coInsurance": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "insuranceType": "GROUP_POLICY",
+            "network": {"indicator": "OUT_OF_NETWORK"},
+            "priorAuthIndicator": "U",
+            "service": {"value": "23", "definition": "Diagnostic Dental", "system": "STC"},
+            "percent": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "insuranceType": "GROUP_POLICY",
+            "network": {"indicator": "OUT_OF_NETWORK"},
+            "priorAuthIndicator": "U",
+            "service": {"value": "25", "definition": "Restorative", "system": "STC"},
+            "percent": "0.2"
+          }
+        ],
+        "deductible": [
+          {
+            "coverageLevel": "FAMILY",
+            "service": {"value": "24", "definition": "Periodontics", "system": "STC"},
+            "planCoverageDescription": "MET",
+            "timePeriod": "LIFETIME",
+            "amount": "225"
+          },
+          {
+            "coverageLevel": "FAMILY",
+            "service": {"value": "24", "definition": "Periodontics", "system": "STC"},
+            "planCoverageDescription": "MET",
+            "timePeriod": "SERVICE_YEAR",
+            "amount": "100"
+          }
+        ],
+        "limitations": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "service": {"value": "24", "definition": "Periodontics", "system": "STC"},
+            "timePeriod": "REMAINING",
+            "amount": "968.5"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "service": {"value": "25", "definition": "Restorative", "system": "STC"},
+            "timePeriod": "REMAINING",
+            "amount": "968.5"
+          }
+        ],
+        "nonCovered": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "OUT_OF_NETWORK"},
+            "priorAuthIndicator": "U",
+            "service": {"value": "D0431", "system": "CDT"}
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "OUT_OF_NETWORK"},
+            "priorAuthIndicator": "U",
+            "service": {"value": "D7880", "system": "CDT"}
+          }
+        ]
+      }
+    }
+  ]
+}

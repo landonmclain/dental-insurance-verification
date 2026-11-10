@@ -1,0 +1,20 @@
+{
+  "payer_id": "61101",
+  "payer_name": "Humana",
+  "member_id": "HUMANA123",
+  "group_id": "8333535",
+  "subscriber_first": "Jane",
+  "subscriber_last": "Doe",
+  "subscriber_dob": "1975-05-05",
+  "relationship": "self",
+  "plan_name": "Humana Gold Plan",
+  "subscriber_address_line1": "1156 Murphy Creek Apt. 150",
+  "subscriber_address_city": "Port Monicastad",
+  "subscriber_address_state": "AS",
+  "subscriber_address_zip": "04449",
+  "provider_npi": "1999999984",
+  "provider_organization_name": "Demo Dental Group",
+  "stedi_payer_id": "61101",
+  "difficulty": "easy",
+  "image_path": "data/cards/card_0005.png"
+}

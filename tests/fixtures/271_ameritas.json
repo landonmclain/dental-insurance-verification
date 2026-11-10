@@ -1,0 +1,100 @@
+{
+  "payerId": "AMTAS00425",
+  "payer": {
+    "name": {"organization": "AMERITAS"},
+    "type": "PAYER",
+    "contacts": [{"name": "CUSTOMER RELATIONS", "phoneNumbers": ["8004875553"], "emails": ["GROUP@AMERITAS.COM"], "faxNumbers": ["4023092580"]}],
+    "identification": "AMTAS00425"
+  },
+  "provider": {
+    "name": {"person": {"firstName": "PLAQUE", "lastName": "PENGUIN"}},
+    "type": "PROVIDER",
+    "npi": "1999999984"
+  },
+  "subscriber": {
+    "name": {"person": {"firstName": "FALCON", "lastName": "DENT"}},
+    "memberId": "007007007",
+    "dateOfBirth": "1985-06-07",
+    "gender": "FEMALE",
+    "address": {
+      "addressLine1": "987 SOARING EAGLE LANE",
+      "city": "WING CITY",
+      "state": "CA",
+      "postalCode": "11111"
+    },
+    "additionalInformation": {"plan": {"number": "1248163264", "name": "DENTAL PLAN PLUS"}, "group": {"number": "5121024"}},
+    "dates": {"plan": {"start": "2026-11-01", "end": "2027-11-01"}, "eligibility": {"start": "2023-06-01"}}
+  },
+  "plans": [
+    {
+      "benefits": {
+        "statuses": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "insuranceType": "GROUP_POLICY",
+            "service": {"value": "35", "definition": "Dental Care", "system": "STC"},
+            "status": "ACTIVE_COVERAGE"
+          }
+        ],
+        "coInsurance": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "23", "definition": "Diagnostic Dental", "system": "STC"},
+            "percent": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "25", "definition": "Restorative", "system": "STC"},
+            "messages": ["TYPE 1 PROCEDURES COVERED AT 100% OF AMOUNT LISTED IN THE CERTIFICATE BOOKLET."],
+            "percent": "0"
+          }
+        ],
+        "deductible": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "messages": ["BASIC/MAJOR/SELECT"],
+            "timePeriod": "CALENDAR_YEAR",
+            "amount": "50"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "messages": ["BASIC/MAJOR/SELECT"],
+            "timePeriod": "REMAINING",
+            "amount": "50"
+          }
+        ],
+        "limitations": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "timePeriod": "CALENDAR_YEAR",
+            "amount": "2500"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "timePeriod": "REMAINING",
+            "amount": "2500"
+          }
+        ],
+        "exclusions": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "messages": ["THERE ARE NO WAITING PERIODS ON THIS PLAN."]
+          }
+        ],
+        "benefitDisclaimer": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "messages": ["FINAL BENEFIT CALCULATION WILL BE DETERMINED UPON RECEIPT OF THE CLAIM. THIS IS NOT A GUARANTEE OF PAYMENT OR ELIGIBILITY."]
+          }
+        ]
+      }
+    }
+  ]
+}

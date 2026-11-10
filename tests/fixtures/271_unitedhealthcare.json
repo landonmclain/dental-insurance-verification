@@ -1,0 +1,158 @@
+{
+  "payerId": "52133",
+  "payer": {
+    "name": {"organization": "UNITEDHEALTHCARE DENTAL"},
+    "type": "PAYER",
+    "identification": "52133"
+  },
+  "provider": {
+    "name": {"organization": "ONE"},
+    "type": "PROVIDER",
+    "npi": "1999999984"
+  },
+  "subscriber": {
+    "name": {"person": {"firstName": "BEAVER", "lastName": "DENT", "middleName": "C"}},
+    "memberId": "404404404",
+    "dateOfBirth": "1969-06-28",
+    "gender": "MALE",
+    "address": {
+      "addressLine1": "456 RIVERBANK ROAD",
+      "city": "DAMVILLE",
+      "state": "CA",
+      "postalCode": "11111"
+    },
+    "additionalInformation": {"group": {"number": "007007"}},
+    "dates": {"plan": {"start": "2026-11-01", "end": "2027-11-01"}}
+  },
+  "plans": [
+    {
+      "benefits": {
+        "statuses": [
+          {
+            "coverageLevel": "ALL",
+            "insuranceType": "PREFERRED_PROVIDER_ORGANIZATION_PPO",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "planCoverageDescription": "BSCA 65 - EMBEDDED D&P PPO PLAN - DBPEMB03",
+            "service": {"value": "30", "definition": "Health Benefit Plan Coverage", "system": "STC"},
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "D0120", "system": "CDT"},
+            "status": "ACTIVE_COVERAGE"
+          }
+        ],
+        "coPayment": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "D0120", "system": "CDT"},
+            "timePeriod": "VISIT",
+            "amount": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "D0150", "system": "CDT"},
+            "timePeriod": "VISIT",
+            "amount": "0"
+          }
+        ],
+        "coInsurance": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_NETWORK"},
+            "service": {"value": "D0120", "system": "CDT"},
+            "timePeriod": "VISIT",
+            "percent": "0"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "OUT_OF_NETWORK"},
+            "service": {"value": "D0150", "system": "CDT"},
+            "timePeriod": "VISIT",
+            "percent": "0.2"
+          }
+        ],
+        "deductible": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "30", "definition": "Health Benefit Plan Coverage", "system": "STC"},
+            "timePeriod": "CALENDAR_YEAR",
+            "amount": "50"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "D0120", "system": "CDT"},
+            "timePeriod": "CALENDAR_YEAR",
+            "amount": "50"
+          }
+        ],
+        "outOfPocket": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "insuranceType": "PREFERRED_PROVIDER_ORGANIZATION_PPO",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "30", "definition": "Health Benefit Plan Coverage", "system": "STC"},
+            "timePeriod": "CALENDAR_YEAR",
+            "amount": "1000"
+          },
+          {
+            "coverageLevel": "FAMILY",
+            "insuranceType": "PREFERRED_PROVIDER_ORGANIZATION_PPO",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "30", "definition": "Health Benefit Plan Coverage", "system": "STC"},
+            "timePeriod": "CALENDAR_YEAR",
+            "amount": "2000"
+          }
+        ],
+        "limitations": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "D0120", "system": "CDT"},
+            "serviceLimits": [
+              {"delivery": {"quantity": {"value": "1", "qualifier": "VISITS"}, "period": {"value": 6, "qualifier": "MONTH"}}}
+            ]
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "D0150", "system": "CDT"},
+            "serviceLimits": [
+              {"delivery": {"quantity": {"value": "2", "qualifier": "VISITS"}, "period": {"value": 12, "qualifier": "MONTH"}}}
+            ]
+          }
+        ],
+        "nonCovered": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "D2393", "system": "CDT"}
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "D2630", "system": "CDT"}
+          }
+        ],
+        "otherOrAdditionalPayer": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "service": {"value": "30", "definition": "Health Benefit Plan Coverage", "system": "STC"},
+            "relatedEntities": [{"name": {"organization": "MEDICARE"}, "type": "PAYER"}]
+          }
+        ],
+        "healthCareFacility": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "relatedEntities": [{"name": {"organization": "ONE"}, "type": "PROVIDER", "npi": "1999999984"}]
+          }
+        ]
+      }
+    }
+  ]
+}

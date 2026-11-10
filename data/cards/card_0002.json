@@ -1,0 +1,20 @@
+{
+  "payer_id": "62308",
+  "payer_name": "Cigna",
+  "member_id": "U3141592653",
+  "group_id": "7778889",
+  "subscriber_first": "Jaguar",
+  "subscriber_last": "Dent",
+  "subscriber_dob": "1996-05-05",
+  "relationship": "self",
+  "plan_name": "Cigna Dental Plan",
+  "subscriber_address_line1": "7682 Jake Manor",
+  "subscriber_address_city": "Jessicastad",
+  "subscriber_address_state": "SC",
+  "subscriber_address_zip": "72101",
+  "provider_npi": "1999999984",
+  "provider_organization_name": "Demo Dental Group",
+  "stedi_payer_id": "62308",
+  "difficulty": "easy",
+  "image_path": "data/cards/card_0002.png"
+}

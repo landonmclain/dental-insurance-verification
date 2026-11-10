@@ -1,0 +1,20 @@
+{
+  "payer_id": "52133",
+  "payer_name": "UnitedHealthcare",
+  "member_id": "404404404",
+  "group_id": "007007",
+  "subscriber_first": "Beaver",
+  "subscriber_last": "Dent",
+  "subscriber_dob": "1969-06-28",
+  "relationship": "self",
+  "plan_name": "UnitedHealthcare Dental Plan",
+  "subscriber_address_line1": "886 Gary Alley Suite 486",
+  "subscriber_address_city": "Castillohaven",
+  "subscriber_address_state": "ND",
+  "subscriber_address_zip": "85925",
+  "provider_npi": "1999999984",
+  "provider_organization_name": "Demo Dental Group",
+  "stedi_payer_id": "52133",
+  "difficulty": "easy",
+  "image_path": "data/cards/card_0003.png"
+}

@@ -1,0 +1,20 @@
+{
+  "payer_id": "10134",
+  "payer_name": "Metlife",
+  "member_id": "88877788",
+  "group_id": "7771117",
+  "subscriber_first": "Elephant",
+  "subscriber_last": "Dent",
+  "subscriber_dob": "1984-02-29",
+  "relationship": "self",
+  "plan_name": "Metlife Dental Plan",
+  "subscriber_address_line1": "18397 Whitehead Drive Suite 282",
+  "subscriber_address_city": "Port Christina",
+  "subscriber_address_state": "AR",
+  "subscriber_address_zip": "66649",
+  "provider_npi": "1999999984",
+  "provider_organization_name": "Demo Dental Group",
+  "stedi_payer_id": "10134",
+  "difficulty": "easy",
+  "image_path": "data/cards/card_0004.png"
+}

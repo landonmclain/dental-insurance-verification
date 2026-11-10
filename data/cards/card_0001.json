@@ -1,0 +1,20 @@
+{
+  "payer_id": "AMTAS00425",
+  "payer_name": "Ameritas",
+  "member_id": "007007007",
+  "group_id": "5121024",
+  "subscriber_first": "Falcon",
+  "subscriber_last": "Dent",
+  "subscriber_dob": "1985-06-07",
+  "relationship": "self",
+  "plan_name": "DENTAL PLAN PLUS",
+  "subscriber_address_line1": "022 Williams Ports",
+  "subscriber_address_city": "Port Allen",
+  "subscriber_address_state": "MD",
+  "subscriber_address_zip": "34311",
+  "provider_npi": "1999999984",
+  "provider_organization_name": "Demo Dental Group",
+  "stedi_payer_id": "AMTAS00425",
+  "difficulty": "easy",
+  "image_path": "data/cards/card_0001.png"
+}

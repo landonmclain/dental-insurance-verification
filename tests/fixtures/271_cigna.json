@@ -1,0 +1,119 @@
+{
+  "payerId": "62308",
+  "payer": {
+    "name": {"organization": "CHLIC"},
+    "type": "PAYER",
+    "contacts": [{"name": "CUSTOMER SERVICE", "phoneNumbers": ["8002446224"], "urls": ["cignaforhcp.cigna.com"]}],
+    "tin": "591031071"
+  },
+  "provider": {
+    "name": {"organization": "ONE"},
+    "type": "PROVIDER",
+    "npi": "1999999984"
+  },
+  "subscriber": {
+    "name": {"person": {"firstName": "JAGUAR", "lastName": "DENT"}},
+    "memberId": "U3141592653",
+    "dateOfBirth": "1996-05-05",
+    "gender": "MALE",
+    "address": {
+      "addressLine1": "444 SPOTTED PATH",
+      "city": "RAINFOREST CITY",
+      "state": "CA",
+      "postalCode": "11111"
+    },
+    "additionalInformation": {
+      "group": {"number": "7778889", "name": "DENTAL GROUP"},
+      "planNetwork": {"number": "DENTL", "name": "TOTAL CIGNA DPPO"}
+    },
+    "dates": {"plan": {"start": "2026-11-01", "end": "2027-11-01"}, "eligibility": {"start": "2024-01-01"}}
+  },
+  "plans": [
+    {
+      "benefits": {
+        "statuses": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "insuranceType": "PREFERRED_PROVIDER_ORGANIZATION_PPO",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "35", "definition": "Dental Care", "system": "STC"},
+            "status": "ACTIVE_COVERAGE"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "4", "definition": "Diagnostic X-Ray", "system": "STC"},
+            "status": "ACTIVE_COVERAGE"
+          }
+        ],
+        "coInsurance": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "38", "definition": "Orthodontics", "system": "STC"},
+            "messages": ["D0470 D8010 D8020 D8030 D8040 D8050 D8060 D8070 D8080 D8090 D8210 D8220 D8660 D8670 D8680 D8690 D8692 D8703 D8704"],
+            "percent": "0.5"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "4", "definition": "Diagnostic X-Ray", "system": "STC"},
+            "messages": ["D0340 D0350 D0351 D0396 D0702 D0703 D0704"],
+            "percent": "0.5"
+          }
+        ],
+        "deductible": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "35", "definition": "Dental Care", "system": "STC"},
+            "timePeriod": "CALENDAR_YEAR",
+            "amount": "50"
+          },
+          {
+            "coverageLevel": "FAMILY",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "35", "definition": "Dental Care", "system": "STC"},
+            "timePeriod": "CALENDAR_YEAR",
+            "amount": "150"
+          }
+        ],
+        "limitations": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "4", "definition": "Diagnostic X-Ray", "system": "STC"},
+            "messages": ["D0340 D0350 D0351 D0396 D0702 D0703 D0704", "COMBINED WITH DIAGNOSTIC DENTAL, PERIODONTICS, ADJUNCTIVE DENTAL SERVICES, DIAGNOSTIC XRAY, ROUTINE (PREVENTIVE) DENTAL, ORTHODONTICS AND ORAL SURGERY"],
+            "timePeriod": "LIFETIME",
+            "amount": "1500"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "4", "definition": "Diagnostic X-Ray", "system": "STC"},
+            "messages": ["D0340 D0350 D0351 D0396 D0702 D0703 D0704", "COMBINED WITH DIAGNOSTIC DENTAL, PERIODONTICS, ADJUNCTIVE DENTAL SERVICES, DIAGNOSTIC XRAY, ROUTINE (PREVENTIVE) DENTAL, ORTHODONTICS AND ORAL SURGERY"],
+            "timePeriod": "LIFETIME_REMAINING",
+            "amount": "1500"
+          },
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "4", "definition": "Diagnostic X-Ray", "system": "STC"},
+            "messages": ["D0210 D0330"],
+            "serviceLimits": [
+              {"delivery": {"period": {"value": 1, "qualifier": "REMAINING"}, "frequency": {"value": "36", "qualifier": "MONTHS"}}}
+            ],
+            "quantity": {"value": "1", "qualifier": "VISITS"}
+          }
+        ],
+        "nonCovered": [
+          {
+            "coverageLevel": "INDIVIDUAL",
+            "network": {"indicator": "IN_AND_OUT_OF_NETWORK"},
+            "service": {"value": "23", "definition": "Diagnostic Dental", "system": "STC"}
+          }
+        ]
+      }
+    }
+  ]
+}
